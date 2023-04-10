@@ -18,7 +18,7 @@ Because this is probably the first time you are logging into this server, your t
 
 Once you are logged in, it should display a message similar to the one shown in the image below: 
 
-![Image](ssh-login.png). 
+![Image](ssh-login.png)
 
 Congrats, you're in! 
 
