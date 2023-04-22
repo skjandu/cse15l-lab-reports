@@ -69,7 +69,7 @@ public void testReverseInPlace1() {
 }
 ```
 
-The symptom of the failure-inducing input is shown below. The symptom is the incorrect value being at the last position of the array. The value was 3 rather than 5, which means the output list was {3, 12, 3}.
+The symptom of the failure-inducing input is shown below. The symptom is the incorrect value being at the last position of the array. The value was 5 rather than 3, which means the output list was {5, 12, 5}.
 
 ![Image](failure-input.png) 
 
@@ -79,25 +79,23 @@ The symptom of the input that does not produce a failure is shown below. The tes
 
 The original code of the `reverseInPlace()` method is as follows:
 ```
-  // Changes the input array to be in reversed order
-  static void reverseInPlace(int[] arr) {
-    for(int i = 0; i < (arr.length / 2); i += 1) {
-      int temp = arr[i];
+// Changes the input array to be in reversed order
+static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < arr.length; i += 1) {
       arr[i] = arr[arr.length - i - 1];
-      arr[arr.length - i - 1] = temp;
     }
-  } 
+}
 ```
-The error in the code above is that out of the two elements being swapped, the second element is replaced with the first element but the first element is not replaced with the second element. This results in a duplication of the first element. We must solve this by storing the value of the first element in a temporary variable so that its value is not lost and can later be reassigned to the second element. The code with the fixed bug is as follows:
+The error in the code above is that out of the two elements being swapped, the first element takes the value of the second element. Then, when the second element is swapped with the first element, its value does not changed, since we changed the value of the first element to equal the second element. This means we have lost the value of the first element and results in a duplication of the second element. We must solve this by storing the value of the first element in a temporary variable so that its value is not lost and can later be reassigned to the second element. We must also  The code with the fixed bug is as follows:
 ```
-  // Changes the input array to be in reversed order
-  static void reverseInPlace(int[] arr) {
+// Changes the input array to be in reversed order
+static void reverseInPlace(int[] arr) {
     for(int i = 0; i < (arr.length / 2); i += 1) {
-      int temp = arr[i];
-      arr[i] = arr[arr.length - i - 1];
-      arr[arr.length - i - 1] = temp;
+          int temp = arr[i];
+          arr[i] = arr[arr.length - i - 1];
+          arr[arr.length - i - 1] = temp;
     }
-  } 
+} 
 ```
 
 ## Part 3
