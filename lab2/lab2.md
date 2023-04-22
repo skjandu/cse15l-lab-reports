@@ -86,7 +86,7 @@ static void reverseInPlace(int[] arr) {
     }
 }
 ```
-The error in the code above is that out of the two elements being swapped, the first element takes the value of the second element. Then, when the second element is swapped with the first element, its value does not changed, since we changed the value of the first element to equal the second element. This means we have lost the value of the first element and results in a duplication of the second element. We must solve this by storing the value of the first element in a temporary variable so that its value is not lost and can later be reassigned to the second element. We must also  The code with the fixed bug is as follows:
+The error in the code above is that out of the two elements being swapped, the first element takes the value of the second element. Then, when the second element is swapped with the first element, its value does not change, since we changed the value of the first element to equal the second element. This means we have lost the value of the first element and results in a duplication of the second element. We must solve this by storing the value of the first element in a temporary variable so that its value is not lost and can later be reassigned to the second element. We must also only traverse half of the array because if we traverse the entire array, then the values would be swapped twice and that would just return the array back to its original value. The code with the fixed bug is as follows:
 ```
 // Changes the input array to be in reversed order
 static void reverseInPlace(int[] arr) {
