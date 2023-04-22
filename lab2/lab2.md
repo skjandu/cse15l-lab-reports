@@ -52,9 +52,9 @@ The bug that I am choosing to analyze is in the `reverseInPlace()` method. One f
 ```
 @Test 
 public void testReverseInPlace2() {
-	int[] input1 = {3, 12, 5};
-	ArrayExamples.reverseInPlace(input1);
-	assertArrayEquals(new int[]{5, 12, 3}, input1);
+    int[] input1 = {3, 12, 5};
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{5, 12, 3}, input1);
 }
 ```
 
