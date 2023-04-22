@@ -41,7 +41,7 @@ For the first request, the method that I call is `start()`, which takes the port
 
 ![Image](lab2-screenshot1.png) 
 
-For my second request, the server is already running so we do not need to call `start()` again. Because we didn't call the method, the value of `port` and `handler` stays the same. The method `handleRequest()` is called again and this time the value of its parameter is `url = localhost:7362/add-message?s=Howareyou?!`. This changed the value of the String variable `message` to "Hi friends/nHow are you?!" since it is concatenated to the previous text. Therefore, the webpage changes: 
+For my second request, the server is already running so we do not need to call `start()` again. Because we didn't call the method, the value of `port` and `handler` stays the same. The method `handleRequest()` is called again and this time the value of its parameter is `url = localhost:7362/add-message?s=Howareyou?!`. This changed the value of the String variable `message` to "Hi friends\nHow are you?!\n" since it is concatenated to the previous text. Therefore, the webpage changes: 
 
 ![Image](lab2-screenshot2.png) 
 
