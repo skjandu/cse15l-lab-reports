@@ -47,5 +47,58 @@ For my second request, the server is already running so we do not need to call `
 
 
 ## Part 2
+The bug that I am choosing to analyze is in the `reverseInPlace()` method. One failure-inducing input is the list {3, 12, 5}, since I wanted to test a list that had more than one element. The input is shown below as a JUnit test:
 
+```
+@Test 
+	public void testReverseInPlace2() {
+    int[] input1 = {3, 12, 5};
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{5, 12, 3}, input1);
+	}
+```
 
+An input that does not produce a failure is {3}, which is a list with a single element as shown below:
+
+```
+@Test 
+	public void testReverseInPlace1() {
+    int[] input1 = { 3 };
+    ArrayExamples.reverseInPlace(input1);
+    assertArrayEquals(new int[]{ 3 }, input1);
+	}
+```
+
+The symptom of the failure-inducing input is shown below. The symptom is the incorrect value being at the last position of the array. The value was 3 rather than 5, which means the output list was {3, 12, 3}.
+
+![Image](failure-input.png) 
+
+The symptom of the input that does not produce a failure is shown below. The tests pass successfully because it does not detect a failure.
+
+![Image](no-fail-input.png)
+
+The original code of the `reverseInPlace()` method is as follows:
+```
+  // Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < (arr.length / 2); i += 1) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
+    }
+  } 
+```
+The error in the code above is that out of the two elements being swapped, the second element is replaced with the first element but the first element is not replaced with the second element. This results in a duplication of the first element. We must solve this by storing the value of the first element in a temporary variable so that it can be reassigned. The code with the fixed bug is as follows:
+```
+  // Changes the input array to be in reversed order
+  static void reverseInPlace(int[] arr) {
+    for(int i = 0; i < (arr.length / 2); i += 1) {
+      int temp = arr[i];
+      arr[i] = arr[arr.length - i - 1];
+      arr[arr.length - i - 1] = temp;
+    }
+  } 
+```
+
+## Part 3
+In week 2 lab, I learned how to create my own web server, which was really interesting. I learned how to write a program to change the display of the webpage based on the value of the url that I provide. There are various methods in Java that I was not familiar with before, like `getQuery()` and `getPath()` which makes it simple to extract different parts of the url. 
