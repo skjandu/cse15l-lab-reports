@@ -88,7 +88,7 @@ The original code of the `reverseInPlace()` method is as follows:
     }
   } 
 ```
-The error in the code above is that out of the two elements being swapped, the second element is replaced with the first element but the first element is not replaced with the second element. This results in a duplication of the first element. We must solve this by storing the value of the first element in a temporary variable so that it can be reassigned. The code with the fixed bug is as follows:
+The error in the code above is that out of the two elements being swapped, the second element is replaced with the first element but the first element is not replaced with the second element. This results in a duplication of the first element. We must solve this by storing the value of the first element in a temporary variable so that its value is not lost and can later be reassigned to the second element. The code with the fixed bug is as follows:
 ```
   // Changes the input array to be in reversed order
   static void reverseInPlace(int[] arr) {
