@@ -51,22 +51,22 @@ The bug that I am choosing to analyze is in the `reverseInPlace()` method. One f
 
 ```
 @Test 
-	public void testReverseInPlace2() {
-    int[] input1 = {3, 12, 5};
-    ArrayExamples.reverseInPlace(input1);
-    assertArrayEquals(new int[]{5, 12, 3}, input1);
-	}
+public void testReverseInPlace2() {
+	int[] input1 = {3, 12, 5};
+	ArrayExamples.reverseInPlace(input1);
+	assertArrayEquals(new int[]{5, 12, 3}, input1);
+}
 ```
 
 An input that does not produce a failure is {3}, which is a list with a single element as shown below:
 
 ```
 @Test 
-	public void testReverseInPlace1() {
+public void testReverseInPlace1() {
     int[] input1 = { 3 };
     ArrayExamples.reverseInPlace(input1);
     assertArrayEquals(new int[]{ 3 }, input1);
-	}
+}
 ```
 
 The symptom of the failure-inducing input is shown below. The symptom is the incorrect value being at the last position of the array. The value was 3 rather than 5, which means the output list was {3, 12, 3}.
