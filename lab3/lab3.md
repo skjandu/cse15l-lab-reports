@@ -155,8 +155,7 @@ In this example, we might want to find all the studies in this database that are
 
 **Example 2:**
 ```
-$ grep -Rwi "Alzheimer's Disease" docsearch/technical/biomed/1468-6708-3-1.txt
- >  grep -Ri "alzheimer's" docsearch/technical/biomed/                       
+$ grep -Rwi "Alzheimer's Disease" docsearch/technical/biomed/                   
 docsearch/technical/biomed//1471-2415-3-5.txt:          Parkinson's disease [ 53 ] and Alzheimer's disease [ 54 ]
 docsearch/technical/biomed//1471-2210-1-10.txt:        might be beneficial in the treatment of Alzheimer's disease
 docsearch/technical/biomed//1471-2202-4-16.txt:        diseases, including Parkinson's, Alzheimer's and prion
