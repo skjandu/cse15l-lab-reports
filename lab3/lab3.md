@@ -1,6 +1,6 @@
 # Lab Report 3 - Researching Commands
 
-I will be exploring the options that can be used with the `grep` command. The input file with the following path will be used in the examples: `docsearch/technical/biomed/1468-6708-3-1.txt`. I obtained information about all of these options at the GeeksforGeeks website: https://www.geeksforgeeks.org/grep-command-in-unixlinux/#. 
+I will be exploring the options that can be used with the `grep` command. The input file with the following path will be used in the examples: `docsearch/technical/biomed/1468-6708-3-1.txt`. I obtained information about all of these options at the GeeksforGeeks website: <https://www.geeksforgeeks.org/grep-command-in-unixlinux/#>. 
 
 ## -c option
 
