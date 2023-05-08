@@ -1,6 +1,6 @@
 # Lab Report 3 - Researching Commands
 
-I will be exploring the options that can be used with the grep command. I will be using the input file with the following path `docsearch/technical/biomed/1468-6708-3-1.txt`.
+I will be exploring the options that can be used with the grep command. The input file with the following path will be used in the examples: `docsearch/technical/biomed/1468-6708-3-1.txt`. I obtained information about all of these options at the following link: https://www.geeksforgeeks.org/grep-command-in-unixlinux/#. 
 
 ## -c option
 
@@ -104,6 +104,8 @@ We might want to check whether a certain word is correctly capitalized for each 
 ## -R option 
 
 This option recursively searches for the pattern for all files within a directory. It returns the files that contain the pattern along with one line from each text that contains a match. 
+
+**Example 1:**
 
 ```
 $ grep -R "Alzheimer's" docsearch/technical/biomed/
