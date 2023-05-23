@@ -4,7 +4,7 @@
 
 ![Image](step4-screenshot.png)
 
-This command logged into the remote ieng6 server. No additional keys were used other than the command `ssh cs15lsp23pn@ieng6.ucsd.edu`. 
+This command logged into the remote ieng6 server without using a password since we used ssh authentication. No additional keys were used other than the command `ssh cs15lsp23pn@ieng6.ucsd.edu`. 
 
 ## Step 5: Clone your fork of the repository from your Github account 
 
@@ -41,4 +41,4 @@ I pressed the following keys: `<up> <up> <enter>` since the `bash test.sh` comma
 
 ![Image](step9-screenshot.png) 
 
-I added the file `ListExamples.java` and committed the changes made to the file with the message "fix typos in ListExamples.java." Finally, I pushed the changes to github. No additional keys were used. 
+I added the file `ListExamples.java` and committed the changes made to the file with the message "fix typo in ListExamples.java." Finally, I pushed the changes to github. No additional keys were used. 
