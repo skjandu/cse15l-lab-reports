@@ -27,6 +27,8 @@ Keys pressed: `bash t<tab> <enter>`. Next, I ran the junit tests by running the 
 
 ![Image](step7-screenshot.png)
 
+In order to edit the file, I used vim: `vim ListExamples.java` with no additional keys. 
+
 Once vim mode was entered, the keys pressed were: `/change <enter> <j> <l> <l> <x> <i> <2> <esc> <:wq>` First, I searched for the word `change` since that is the comment that is located right above the line we want to change. Then, we navigate to character `1` located at the end of the word `index1` and delete that character by pressing `x`. Next, we enter insert mode by pressing `i` and type `2` in the place of `1`. Then, exit insert mode using the escape key. Finally, save and exit the file using `:wq`. 
 
 ## Step 8: Run the test, demonstrating that they now succeed 
@@ -37,8 +39,6 @@ I pressed the following keys: `<up> <up> <enter>` since the `bash test.sh` comma
 
 ## Step 9: Commit and push the resulting change to Github account
 
-```
-$ git add ListExamples.java <enter>
-$ git commit -m "fix typo in ListExamples.java" <enter>
-$ git push _______
-```
+![Image](step9-screenshot.png) 
+
+I added the file `ListExamples.java` and committed the changes made to the file with the message "fix typos in ListExamples.java." Finally, I pushed the changes to github. No additional keys were used. 
